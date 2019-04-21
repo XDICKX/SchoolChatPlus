@@ -1,0 +1,12 @@
+<!--pages/change_signature/change_signature.wxml-->
+<view class='container'>
+<form bindsubmit="change"bindreset="cancel">
+  <view class='inp'>
+    <input type='text' name="name"></input>
+  </view>
+  <view class='btn'>
+    <button form-type="reset"class='cancel' >取消</button>
+    <button form-type="submit">确定</button>
+  </view>
+  </form>
+</view>

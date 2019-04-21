@@ -1,0 +1,4 @@
+/* pages/news3/news3.wxss */
+.slide-image {
+  width: 100%;
+}

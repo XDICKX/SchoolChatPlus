@@ -1,0 +1,9 @@
+/* pages/news1/news1.wxss */
+
+.highlight {
+color: red;
+}
+
+.slide-image {
+  width: 100%;
+}

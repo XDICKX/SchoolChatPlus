@@ -1,0 +1,104 @@
+<!--pages/information/information.wxml-->
+<view class='changeHead'>
+  <view>头像</view>
+    <image src="../../images/myleft.png" bindtap="chooseImage"class='right'></image>
+</view>
+<view class='view'>
+  <view class='container' catchtap = 'change_name'>
+    <view>昵称</view>
+    <view data-type='0' data-content='{{user.name}}' >
+      {{user.nickname}}
+      <image src="../../images/myleft.png" class='right'></image>
+    </view>
+  </view>
+  <view class='container' bindtap='change_gender'>
+    <view>性别</view>
+    <!-- <view catchtap='gender'> -->
+    <!--放假后修改  -->
+      <image src="../../images/myleft.png" class='right'></image>
+  </view>
+  <view class='container'bindtap='change_desc'>
+    <view style='width:18%;'>个性签名</view>
+    <view class='red' wx:if='{{user.signature==""}}' catchtap='toChange' data-type='1' data-content='{{user.signature}}'>待完善</view>
+    <view wx:else style="word-wrap: break-word;word-break: normal;width: 80%;text-align:right;" catchtap='toChange' data-type='1' data-content='{{user.signature}}'>{{user.signature}}</view>
+    <image src="../../images/myleft.png" class='right'></image> 
+  </view>
+</view>
+<view class='notice'>
+  <image src='../../images/notice.png'></image>
+  <text>以下信息已保密处理，仅供个人使用</text>
+</view>
+<view class='view'>
+  <view class='container'>
+    <view catchtap = 'change_birth'>生日</view>
+    <picker mode="date" value="{{user.birthday}}" start="1900-01-01" end="2018-09-01" bindchange="bindDateChange">
+      <view class="red" wx:if="{{user.birthday==''}}">未知</view>
+      <view wx:else>{{user.birthday}}</view>
+      <image src="../../images/myleft.png" class='right'></image>
+    </picker>
+  </view>
+  <view class='container'>
+    <view>学号</view>
+    <view class='red' wx:if='{{!user.num}}' data-type='2' data-content='{{user.num}}'>未绑定</view>
+    <view wx:else  data-type='2' data-content='{{num}}'>{{user.num}}</view>
+    <image src="../../images/myleft.png" class='right'></image>  
+  </view>
+  <view class='container'>
+    <view>学院</view>
+    <view class='red' wx:if='{{!user.college}}'>绑定学号可知</view>
+    <view wx:else>{{user.college}}</view>
+    <image src="../../images/myleft.png" class='right'></image> 
+  </view>
+  <view class='container'>
+    <view>宿舍</view>
+    <view class='red' wx:if='{{!user.hostel}}'>绑定学号可知</view>
+    <view wx:else>{{user.hostel}}</view>
+    <image src="../../images/myleft.png" class='right'></image>
+  </view>
+  <view class='container'>
+    <view>家乡</view>
+    <!-- 放假后修改  -->
+    <picker mode="region" bindchange="bindRegionChange" value="{{user.hometown}}" custom-item="{{customItem}}" wx:if="{{user.hometown}}">
+      <view>{{user.hometown}}</view>
+    </picker>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" wx:else>
+      <view>{{address}}</view>
+    </picker> 
+    <image src="../../images/myleft.png" class='right'></image>
+  </view>
+  <!--放假后修改  -->
+  <view class='container'>
+    <view>手机号码</view>
+    <view class='red' wx:if='{{!user.tel}}' data-type='3' data-content='{{user.tel}}'>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class='getTel'>未绑定</button>
+    </view>
+    <view wx:else catchtap='toChange' data-type='3' data-content='{{user.tel}}'>{{tel}}</view>
+    <image src="../../images/myleft.png" class='right'></image>
+  </view>
+</view>
+<!--修改性别模态框  -->
+<view class='modelContainer' wx:if="{{gender}}">
+  <view class='model'>
+    <view class='modelTitle'>性别</view>
+    <radio-group bindchange="changeGender" class='modelContent' wx:if="{{user.sex==1}}">
+      <view>
+        <label>男</label>
+        <radio id='man' value='1' checked='true'></radio>
+      </view>
+      <view>
+        <label>女</label>
+        <radio id='man' value='2'></radio>
+      </view>   
+    </radio-group>
+    <radio-group bindchange="changeGender" class='modelContent' wx:else>
+      <view>
+        <label>男</label>
+        <radio id='man' value='1' ></radio>
+      </view>
+      <view>
+        <label>女</label>
+        <radio id='man' value='2' checked='true'></radio>
+      </view>   
+    </radio-group>
+  </view>
+</view>

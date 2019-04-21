@@ -1,0 +1,19 @@
+<!--pages/change_birth/change_birth.wxml-->
+<view class = "time">
+ <view>{{year}}年{{month}}月{{day}}日</view>
+ <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange">
+ <picker-view-column>
+ <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+ </picker-view-column>
+ <picker-view-column>
+ <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+ </picker-view-column>
+ <picker-view-column>
+ <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+ </picker-view-column>
+ </picker-view>
+</view>
+  <view class='btn'>
+    <button class='cancel' catchtap='cancel'>取消</button>
+    <button class='change' catchtap='change'>确定</button>
+  </view>

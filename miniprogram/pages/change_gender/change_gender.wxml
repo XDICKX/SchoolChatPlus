@@ -1,0 +1,13 @@
+<!--pages/change_gender/change_gender.wxml-->
+
+<view class="section">
+            <radio-group name="radio-group" bindchange="radioChange">
+                <label class='rad'><radio value="male"/>男</label>
+                <label class='rad'><radio value="female"/>女</label>
+            </radio-group>
+</view>
+
+  <view class='btn'>
+    <button class='cancel' catchtap='cancel'>取消</button>
+    <button class='change' catchtap='change'>确定</button>
+  </view>

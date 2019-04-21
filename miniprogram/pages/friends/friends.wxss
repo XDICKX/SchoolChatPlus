@@ -1,0 +1,53 @@
+/* pages/friends/friends.wxss */
+.list{
+  padding:0px;
+}
+.list-item{
+  height:100rpx;
+  width:710rpx;
+  display:flex;
+  flex-direction: row;
+  border-bottom:1px solid #ccc;
+  padding:20rpx;
+  flex-flow:wrap;
+}
+.left{
+  width:100rpx;
+  height:100rpx;
+}
+.right{
+  width:590rpx;
+  padding-left:20rpx;
+  display:flex;
+  flex-direction:row;
+}
+.title{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+.time{
+  width:160rpx;
+  color:#ccc;
+  font-size:18rpx;
+}
+.name{
+  font-size:30rpx;
+  font-weight:bold;
+  margin-bottom:20rpx;
+}
+.desc{
+  font-size:20rpx;
+}
+.upload-btn {
+  position: fixed;
+  bottom: 100rpx;
+  right: 32rpx;
+  height:100rpx;
+  width:100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50rpx;
+  background-color:rgba(41,153,255,0.8);
+}

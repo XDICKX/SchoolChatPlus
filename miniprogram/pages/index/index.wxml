@@ -1,0 +1,66 @@
+<view class="container">
+<view>
+<text class="textcenter">校内新闻</text>
+
+</view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block>
+            <swiper-item>
+                <image src="{{imgUrls[0]}}" bindtap = 'jumpTo1' class="slide-image"/>
+            </swiper-item>
+            <swiper-item>
+                <image src="{{imgUrls[1]}}" bindtap = 'jumpTo2'  class="slide-image"/>
+            </swiper-item>
+            <swiper-item>
+                <image src="{{imgUrls[2]}}" bindtap = 'jumpTo3' class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<text class="textcenter">校内通知</text>
+
+<view class='countContainer'>
+    <view class='count' >
+      <view class='countTop'>
+        <view>{{context[0].eventType}}</view>
+      </view>
+      <view class='countContent'>
+        <view class='date'>
+          {{context[0].time}}
+          <text>{{context[0].weekday}}</text>
+        </view>
+        <view class='needContainer'>
+          <view class='need'>距离{{context[0].name}}</view>
+          <view>
+            <view class='needTime'>还有</view>
+            <view class='needDay'>{{context[0].restTime}}</view>
+            <view class='needTime'>天</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+
+<view class='countContainer'>
+    <view class='count' >
+      <view class='countTop'>
+        <view>{{context[1].eventType}}</view>
+      </view>
+      <view class='countContent'>
+        <view class='date'>
+          {{context[1].time}}
+          <text>{{context[1].weekday}}</text>
+        </view>
+        <view class='needContainer'>
+          <view class='need'>距离{{context[1].name}}</view>
+          <view>
+            <view class='needTime'>还有</view>
+            <view class='needDay'>{{context[1].restTime}}</view>
+            <view class='needTime'>天</view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

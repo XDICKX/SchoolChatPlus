@@ -1,0 +1,92 @@
+/* pages/my_info/my_info.wxss */
+
+
+
+
+
+/*我的  */
+.btn{
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 0;
+  outline: 0;
+  line-height: 1;
+  display: inline-block;
+}
+.person{
+  padding: 60rpx 0;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.head{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 200rpx;
+  margin-bottom: 40rpx;
+  background-color: #ccc;
+}
+.name{
+  font-size:32rpx;
+  font-family:PingFangSC-Medium;
+  color:rgba(0,0,0,1);
+  line-height:42rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sex{
+  width: 20rpx;
+  height: 20rpx;
+  position:relative;
+  top:12rpx;
+  left:10rpx;
+}
+.signature{
+  font-size:22rpx;
+  font-family:PingFangSC-Regular;
+  color:#4A4A4A;
+  line-height:25rpx;
+  margin-top: 10rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.install{
+  width: 43rpx;
+  height: 43rpx;
+  position:absolute;
+  top:72rpx;
+  right:50rpx;
+  
+}
+.cBtn{
+  width: 44rpx;
+  height: 40rpx;
+  position:absolute;
+  top:150rpx;
+  right:50rpx;
+}
+.list{
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+  border-top: 1rpx solid #EDEDED;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.left image{
+  width: 34rpx;
+  height: 34rpx;
+  margin-right: 23rpx;
+  position:relative;
+  top:3rpx;
+}
+.toright{
+  width: 11rpx;
+  height: 20rpx;
+}

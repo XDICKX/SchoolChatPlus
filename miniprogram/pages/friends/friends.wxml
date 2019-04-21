@@ -1,0 +1,15 @@
+<view class="container list">
+    <view class="list-item" wx:for="{{listDatas}}"wx:key="index"wx:for-index="bindex">
+        <image catchtap = 'chat'  value="{{item.openid}}" src="../../images/curry.jpg" data-bindex='{{bindex}}' class="left"/>
+        <view class="right">
+          <view class="title">
+          <text class="name">{{item.name}}</text>
+          <text class="desc">{{item.desc}}</text>
+          </view>
+          <view class="time">{{item.time}}</view>  
+        </view>
+    </view>
+</view>
+  <view class="upload-btn">
+    <image src="../../images/plus.jpg" bindtap = 'newFriend' style="width:55rpx;height:55rpx"></image>
+  </view>

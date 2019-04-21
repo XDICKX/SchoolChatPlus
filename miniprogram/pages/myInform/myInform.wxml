@@ -1,0 +1,48 @@
+<!--pages/my_info/my_info.wxml-->
+
+<view>
+  <view>
+    <view class='person'>
+      <image src="../../images/curry.jpg" class='head'></image>
+      <view class='name'>
+        <text>{{name}}</text>
+        <image src="../../images/boy.png" class='sex' ></image>
+      </view>
+      <view class='signature'>
+        <text>{{desc}}</text>
+      </view>
+    </view>
+    <image src="../../images/install.png" class='install' bindtap='toInformation'></image>
+    <image src="../../images/chat.png" class='install cBtn'></image>
+    <contact-button class='cBtn' type="default-dark" size="20" session-from="weapp" style='z-index:10;opacity:0;'>
+    </contact-button>
+  </view>
+  <view class='list' catchtap='toMypost'>
+    <view class='left'>
+      <image src="../../images/mypost.png" mode='widthFix'></image>
+      <text>我的帖子</text>
+    </view>
+    <view><image src="../../images/toright.png" class='toright'></image></view>
+  </view>
+  <view class='list' catchtap='toMycomment'>
+    <view class='left'>
+      <image src="../../images/mycomment.png" mode='widthFix'></image>
+      <text>我的评论</text>
+    </view>
+    <view><image src="../../images/toright.png" class='toright'></image></view>
+  </view>
+  <view class='list' catchtap='toCommentonme'>
+    <view class='left'>
+      <image src="../../images/commenttome.png" mode='widthFix'></image>
+      <text>评论我的</text>
+    </view>
+    <view><image src="../../images/toright.png" class='toright'></image></view>
+  </view>
+  <view class='list' catchtap='toMypraise' style='border-bottom:1rpx solid #EDEDED;'>
+    <view class='left'>
+      <image src="../../images/mylike.png" mode='widthFix'></image>
+      <text>我赞过的</text>
+    </view>
+    <view><image src="../../images/toright.png" class='toright'></image></view>
+  </view>
+</view>

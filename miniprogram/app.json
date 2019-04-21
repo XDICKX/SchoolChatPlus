@@ -1,0 +1,64 @@
+{
+  "pages": ["pages/index/index",
+    "pages/friends/friends",
+    "pages/chat/chat",
+    "pages/myInform/myInform",
+    "pages/information/information",
+        "pages/change_signature/change_signature",
+        "pages/change_gender/change_gender",
+        "pages/change_name/change_name",
+        "pages/change_birth/change_birth",
+        "pages/topic/topic",
+        "pages/tosend/tosend",
+            "pages/news1/news1",
+            "pages/news2/news2",
+            "pages/news3/news3",
+            "pages/searchfriend/searchfriend"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#aaa",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tarBar": {
+    "color": "#000",
+    "list": [
+      {
+        "text": "sad"
+      }
+    ]
+  }, 
+   "tabBar": {
+    "list" :[
+      {
+        "pagePath" :"pages/index/index",
+        "text" :"主页",
+        "selectedIconPath": "images/home.png",
+        "iconPath": "images/home_disable.png"
+      },
+      {
+        "pagePath" :"pages/friends/friends",
+        "text" :"好友",
+        "selectedIconPath": "images/friend.png",
+        "iconPath": "images/friend_disable.png"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "text": "广场",
+        "selectedIconPath": "images/topic.png",
+        "iconPath": "images/topic_disable.png"
+      },
+            {
+              "pagePath": "pages/myInform/myInform",
+              "text": "我的",
+              "selectedIconPath": "images/my_info.png",
+              "iconPath": "images/my_info_disable.png"
+            }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "cloud": true
+}

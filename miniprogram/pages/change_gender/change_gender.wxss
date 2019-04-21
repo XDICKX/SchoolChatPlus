@@ -1,0 +1,52 @@
+/* pages/change_gender/change_gender.wxss */
+
+.container{
+  padding: 20rpx 5%;
+  border-top: 1px solid #eee;
+}
+.title{
+  font-size: 30rpx;
+
+}
+.inp{
+  border-bottom: 1px solid #53c0f5;
+  
+  width: 100%;
+}
+input{
+  font-size: 26rpx;
+}
+.btn button{
+  width:45%;
+  font-size:26rpx;
+  margin:0;
+  border:0;
+  outline:0;
+
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30rpx;
+}
+.cancel{
+  background-color: #fff;
+  color: #53c0f5
+}
+.change{
+  background-color: #53c0f5;
+  color: #fff;
+}
+
+.section{
+    margin-top:20px;
+}
+
+.border-input{
+    border:1px solid #ccc;
+}
+.rad{
+  background-color:antiquewhite;
+  width: 100px
+}
